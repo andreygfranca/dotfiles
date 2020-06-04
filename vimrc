@@ -9,3 +9,8 @@ nmap <C-l> <C-w>l
 nnoremap ; :
 
 set nu
+
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab

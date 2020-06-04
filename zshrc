@@ -69,7 +69,7 @@ ZSH_THEME="awesomepanda"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,8 +100,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
-
-alias open=xdg-open
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd6
+export PATH=$JAVA_HOME/bin:$PATH
+export EDITOR=vim
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.zprofile ] && source ~/.zprofile
+
+alias open=xdg-open
