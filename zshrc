@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/agfranca/.oh-my-zsh"
+export ZSH="/home/andreyfranca/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -69,7 +69,15 @@ ZSH_THEME="awesomepanda"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions tmux)
+plugins=(
+        git 
+        zsh-autosuggestions 
+        tmux 
+        docker 
+        gitfast 
+        zsh-interactive-cd
+        sudo
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,9 +106,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd6
 export PATH=$JAVA_HOME/bin:$PATH
 export EDITOR=vim
 
@@ -108,3 +113,23 @@ export EDITOR=vim
 [ -f ~/.zprofile ] && source ~/.zprofile
 
 alias open=xdg-open
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/andreyfranca/.sdkman"
+[[ -s "/home/andreyfranca/.sdkman/bin/sdkman-init.sh" ]] && source "/home/andreyfranca/.sdkman/bin/sdkman-init.sh"
+
+#CONFIGURACOES DOS ALIAS
+. /media/WORK/zeroglosa-workspace/zeroglosa/ambiente/scripts/alias/variaveisDeAmbiente.bashrc
+. /media/WORK/zeroglosa-workspace/zeroglosa/ambiente/scripts/alias/aliasGlobais.bashrc
+. /media/WORK/zeroglosa-workspace/zeroglosa/ambiente/scripts/alias/funcoes.sh
+. /media/WORK/zeroglosa-workspace/zeroglosa/ambiente/scripts/alias/aliasPessoais.bashrc
+#INSTALAÇÃO DO ASDF
+export ASDF_DATA_DIR=/media/WORK/apps/.asdf
+. /media/WORK/apps/asdf/asdf.sh
+. /media/WORK/apps/asdf/completions/asdf.bash
+. ${ASDF_DATA_DIR}/plugins/java/set-java-home.bash
+
+export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
