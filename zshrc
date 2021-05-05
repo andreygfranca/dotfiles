@@ -77,6 +77,7 @@ plugins=(
         gitfast 
         zsh-interactive-cd
         sudo
+        npm
 )
 
 source $ZSH/oh-my-zsh.sh
