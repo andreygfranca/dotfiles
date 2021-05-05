@@ -1,6 +1,7 @@
 if [ -f ~/dotfiles/aliases/fluig.sh ]; then
     source ~/dotfiles/aliases/fluig.sh
     source ~/dotfiles/aliases/network.sh
+    source ~/dotfiles/aliases/npm.sh
 else
     echo "fluig.sh file not found";
 fi
