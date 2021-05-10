@@ -27,6 +27,15 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " " different version somewhere else.
 Plugin 'ascenator/L9', {'name': 'newL9'}
 
+Plugin 't9md/vim-choosewin'
+let g:choosewin_overlay_enable = 1
+
+Plugin 'scrooloose/nerdtree'
+autocmd VimEnter * NERDTree | wincmd p
+
+Plugin 'pangloss/vim-javascript'
+
+Plugin 'nanotech/jellybeans.vim'
 "
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -62,3 +71,5 @@ filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+colorscheme jellybeans
