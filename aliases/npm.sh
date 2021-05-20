@@ -22,3 +22,5 @@ alias zggc="ni && nlac && nlbrc && nlbac && nrd"
 
 # go
 alias gogc="cd /media/WORK/zeroglosa-workspace/faturamento-eficiente/gerenciamento-criticas-ui"
+
+alias nclean="rm -rf __ivy__ngcc && git checkout package.json"
