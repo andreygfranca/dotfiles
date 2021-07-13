@@ -31,11 +31,18 @@ Plugin 't9md/vim-choosewin'
 let g:choosewin_overlay_enable = 1
 
 Plugin 'scrooloose/nerdtree'
-autocmd VimEnter * NERDTree | wincmd p
 
 Plugin 'pangloss/vim-javascript'
 
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
+Plugin 'styled-components/vim-styled-components'
+Plugin 'jparise/vim-graphql'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'maxmellon/vim-jsx-pretty'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 "
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -73,3 +80,23 @@ set shiftwidth=4
 set expandtab
 
 colorscheme jellybeans
+
+" Nerd Tree shortcuts
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+
+"syntatic configurations
+let g:syntastic_java_checkers=['javac']
+let g:syntastic_java_javac_config_file_enabled = 1
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_typescript_checkers = ['tslint', 'tsc'] " see tslint output
+
+
+"editorconfig configurations
+let g:EditorConfig_disable_rules = ['trim_trailing_whitespace']
+
+" ctrl+p configurations
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
