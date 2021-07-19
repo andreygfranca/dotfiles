@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/andreyfranca/.oh-my-zsh"
+export ZSH="/home/andreyf/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -115,19 +115,8 @@ export EDITOR=vim
 
 alias open=xdg-open
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/andreyfranca/.sdkman"
-[[ -s "/home/andreyfranca/.sdkman/bin/sdkman-init.sh" ]] && source "/home/andreyfranca/.sdkman/bin/sdkman-init.sh"
-
-#CONFIGURACOES DOS ALIAS
-. /media/WORK/zeroglosa-workspace/zeroglosa/ambiente/scripts/alias/variaveisDeAmbiente.bashrc
-. /media/WORK/zeroglosa-workspace/zeroglosa/ambiente/scripts/alias/aliasGlobais.bashrc
-. /media/WORK/zeroglosa-workspace/zeroglosa/ambiente/scripts/alias/funcoes.sh
-. /media/WORK/zeroglosa-workspace/zeroglosa/ambiente/scripts/alias/aliasPessoais.bashrc
-#INSTALAÇÃO DO ASDF
-export ASDF_DATA_DIR=/media/WORK/apps/.asdf
-. /media/WORK/apps/asdf/asdf.sh
-. /media/WORK/apps/asdf/completions/asdf.bash
-. ${ASDF_DATA_DIR}/plugins/java/set-java-home.bash
+export SDKMAN_DIR="/home/andreyf/.sdkman"
+[[ -s "/home/andreyf/.sdkman/bin/sdkman-init.sh" ]] && source "/home/andreyf/.sdkman/bin/sdkman-init.sh"
 
 export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
