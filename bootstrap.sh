@@ -14,7 +14,10 @@ then
 fi
 
 # install zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+if [ ! -d "~/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]
+then
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+fi
 
 # link files to correct destination
 ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf
@@ -23,5 +26,6 @@ ln -sf ~/dotfiles/zprofile ~/.zprofile
 ln -sf ~/dotfiles/zshrc ~/.zshrc
 ln -sr ~/dotfiles/config/i3 ~/.config/
 ln -sr ~/dotfiles/config/rofi ~/.config/
+
 
 source ~/.zshrc

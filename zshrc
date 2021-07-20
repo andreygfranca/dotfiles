@@ -124,3 +124,10 @@ export NVM_DIR="$HOME/.nvm"
 
 alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
 
+# load functions
+# # load functions
+if [ -f ~/dotfiles/functions/docker.sh ];
+then
+    source ~/dotfiles/functions/docker.sh
+fi
+
