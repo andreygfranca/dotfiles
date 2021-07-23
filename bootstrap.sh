@@ -26,6 +26,7 @@ ln -sf ~/dotfiles/zprofile ~/.zprofile
 ln -sf ~/dotfiles/zshrc ~/.zshrc
 ln -sr ~/dotfiles/config/i3 ~/.config/
 ln -sr ~/dotfiles/config/rofi ~/.config/
+ln -sr ~/dotfiles/alacritty.yml ~/.alacritty.yml
 
 
 source ~/.zshrc
