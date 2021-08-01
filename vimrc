@@ -43,6 +43,10 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'maxmellon/vim-jsx-pretty'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'artur-shaik/vim-javacomplete2'
 "
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -100,3 +104,14 @@ let g:EditorConfig_disable_rules = ['trim_trailing_whitespace']
 
 " ctrl+p configurations
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+nmap <F5> <Plug>(JavaComplete-Imports-Add)
+imap <F5> <Plug>(JavaComplete-Imports-Add)
+nmap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+imap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)

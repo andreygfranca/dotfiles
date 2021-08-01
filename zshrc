@@ -131,3 +131,4 @@ then
     source ~/dotfiles/functions/docker.sh
 fi
 
+. $HOME/.asdf/asdf.sh
